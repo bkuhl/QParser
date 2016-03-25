@@ -99,7 +99,7 @@ class QParser
      * @param $selector
      * @return mixed
      */
-    public function toXPath($selector)
+    protected function toXPath($selector)
     {
 
         $selectors = $this->getSelectors($selector);

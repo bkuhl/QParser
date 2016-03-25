@@ -2,6 +2,14 @@
 
 namespace Deimos;
 
+class OverloadQParser extends QParser
+{
+    public function testToXPath($selector)
+    {
+        return $this->toXPath($selector);
+    }
+}
+
 class QParserTest extends \PHPUnit_Framework_TestCase
 {
 
@@ -67,7 +75,7 @@ class QParserTest extends \PHPUnit_Framework_TestCase
             array(':scope ul $li > a', 1)
         );
 
-        $qp = new QParser($this->getHtml());
+        $qp = new OverloadQParser($this->getHtml());
 
         foreach ($tests as $test) {
             $c = count($qp->find($test[0]));
@@ -118,9 +126,9 @@ class QParserTest extends \PHPUnit_Framework_TestCase
             array('form#login > input[type=hidden]._method', 'descendant-or-self::form[@id="login"]/input[@type="hidden"][contains(concat(" ",@class," ")," _method ")]')
         );
 
-        $qp = new QParser($this->getHtml());
+        $qp = new OverloadQParser($this->getHtml());
         foreach ($tests as $test) {
-            $this->assertEquals($test[1], $qp->toXPath($test[0]));
+            $this->assertEquals($test[1], $qp->testToXPath($test[0]));
         }
     }
 
