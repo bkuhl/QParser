@@ -24,6 +24,86 @@ class QParser
     protected $xpath = null;
 
     /**
+     * Map of regexes to convert CSS selector to XPath
+     *
+     * @var array
+     */
+    public static $regularExpressions = array(
+
+        // ,
+        '/,/' => '|descendant-or-self::',
+
+        // input:checked, :disabled, etc.
+        '/(.+)?:(checked|disabled|required|autofocus)/' => '\1[@\2="\2"]',
+
+        // input:autocomplete, :autocomplete
+        '/(.+)?:(autocomplete)/' => '\1[@\2="on"]',
+
+        // input:button, input:submit, etc.
+        '/:(text|password|checkbox|radio|button|submit|reset|file|hidden|image|datetime|datetime-local|date|month|time|week|number|range|email|url|search|tel|color)/' => 'input[@type="\1"]',
+
+        // foo[id]
+        '/(\w+)\[([_\w-]+[_\w\d-]*)\]/' => '\1[@\2]',
+
+        // [id]
+        '/\[([_\w-]+[_\w\d-]*)\]/' => '*[@\1]',
+
+        // foo[id=foo]
+        '/\[([_\w-]+[_\w\d-]*)=[\'"]?(.*?)[\'"]?\]/' => '[@\1="\2"]',
+
+        // [id=foo]
+        '/^\[/' => '*[',
+
+        // div#foo
+        '/([_\w-]+[_\w\d-]*)\#([_\w-]+[_\w\d-]*)/' => '\1[@id="\2"]',
+
+        // #foo
+        '/\#([_\w-]+[_\w\d-]*)/' => '*[@id="\1"]',
+
+        // div.foo
+        '/([_\w-]+[_\w\d-]*)\.([_\w-]+[_\w\d-]*)/' => '\1[contains(concat(" ",@class," ")," \2 ")]',
+
+        // .foo
+        '/\.([_\w-]+[_\w\d-]*)/' => '*[contains(concat(" ",@class," ")," \1 ")]',
+
+        // div:first-child
+        '/([_\w-]+[_\w\d-]*):first-child/' => '*/\1[position()=1]',
+
+        // div:last-child
+        '/([_\w-]+[_\w\d-]*):last-child/' => '*/\1[position()=last()]',
+
+        // :first-child
+        '/:first-child/' => '*/*[position()=1]',
+
+        // :last-child
+        '/:last-child/' => '*/*[position()=last()]',
+
+        // :nth-last-child
+        '/:nth-last-child\((\d+)\)/' => '[position()=(last() - (\1 - 1))]',
+
+        // div:nth-child
+        '/([_\w-]+[_\w\d-]*):nth-child\((\d+)\)/' => '*/*[position()=\2 and self::\1]',
+
+        // :nth-child
+        '/:nth-child\((\d+)\)/' => '*/*[position()=\1]',
+
+        // :contains(Foo)
+        '/([_\w-]+[_\w\d-]*):contains\((.*?)\)/' => '\1[contains(string(.),"\2")]',
+
+        // >
+        '/>/' => '/',
+
+        // ~
+        '/~/' => '/following-sibling::',
+
+        // +
+        '/\+([_\w-]+[_\w\d-]*)/' => '/following-sibling::\1[position()=1]',
+        '~\]\*~' => ']',
+        '~\]/\*~' => ']',
+
+    );
+
+    /**
      * QParser constructor.
      * @param $html string|\DOMDocument|null
      */
@@ -77,117 +157,26 @@ class QParser
     }
 
     /**
-     * @param $selector
-     * @return mixed
-     */
-    protected function getSelectors($selector)
-    {
-
-        if (empty($selector)) {
-            throw new \InvalidArgumentException(__FUNCTION__);
-        }
-
-        $removeSpacesAroundOperators = array(
-            array('/\s*>\s*/', '>'),
-            array('/\s*~\s*/', '~'),
-            array('/\s*\+\s*/', '+'),
-            array('/\s*,\s*/', ',')
-        );
-
-        foreach ($removeSpacesAroundOperators as $removeSpace) {
-            $selector = preg_replace($removeSpace[0], $removeSpace[1], $selector);
-        }
-
-        return preg_split('/\s+(?![^\[]+\])/', $selector);
-
-    }
-
-    /**
+     * Convert $selector into an XPath string.
+     *
      * @param $selector
      * @return mixed
      */
     protected function toXPath($selector)
     {
 
-        $selectors = $this->getSelectors($selector);
-        $rules = array(
+        if (empty($selector)) {
+            throw new \InvalidArgumentException(__FUNCTION__);
+        }
 
-            // ,
-            array('/,/', '|descendant-or-self::'),
+        // remove spaces around operators
+        $selector = preg_replace('/\s*([>~,+])\s*/', '$1', $selector);
+        $selectors = preg_split("/\s+(?![^\[]+\])/", $selector);
 
-            // input:checked, :disabled, etc.
-            array('/(.+)?:(checked|disabled|required|autofocus)/', '\1[@\2="\2"]'),
-
-            // input:autocomplete, :autocomplete
-            array('/(.+)?:(autocomplete)/', '\1[@\2="on"]'),
-
-            // input:button, input:submit, etc.
-            array('/:(text|password|checkbox|radio|button|submit|reset|file|hidden|image|datetime|datetime-local|date|month|time|week|number|range|email|url|search|tel|color)/', 'input[@type="\1"]'),
-
-            // foo[id]
-            array('/(\w+)\[([_\w-]+[_\w\d-]*)\]/', '\1[@\2]'),
-
-            // [id]
-            array('/\[([_\w-]+[_\w\d-]*)\]/', '*[@\1]'),
-
-            // foo[id=foo]
-            array('/\[([_\w-]+[_\w\d-]*)=[\'"]?(.*?)[\'"]?\]/', '[@\1="\2"]'),
-
-            // [id=foo]
-            array('/^\[/', '*['),
-
-            // div#foo
-            array('/([_\w-]+[_\w\d-]*)\#([_\w-]+[_\w\d-]*)/', '\1[@id="\2"]'),
-
-            // #foo
-            array('/\#([_\w-]+[_\w\d-]*)/', '*[@id="\1"]'),
-
-            // div.foo
-            array('/([_\w-]+[_\w\d-]*)\.([_\w-]+[_\w\d-]*)/', '\1[contains(concat(" ",@class," ")," \2 ")]'),
-
-            // .foo
-            array('/\.([_\w-]+[_\w\d-]*)/', '*[contains(concat(" ",@class," ")," \1 ")]'),
-
-            // div:first-child
-            array('/([_\w-]+[_\w\d-]*):first-child/', '*/\1[position()=1]'),
-
-            // div:last-child
-            array('/([_\w-]+[_\w\d-]*):last-child/', '*/\1[position()=last()]'),
-
-            // :first-child
-            array('/:first-child/', '*/*[position()=1]'),
-
-            // :last-child
-            array('/:last-child/', '*/*[position()=last()]'),
-
-            // :nth-last-child
-            array('/:nth-last-child\((\d+)\)/', '[position()=(last() - (\1 - 1))]'),
-
-            // div:nth-child
-            array('/([_\w-]+[_\w\d-]*):nth-child\((\d+)\)/', '*/*[position()=\2 and self::\1]'),
-
-            // :nth-child
-            array('/:nth-child\((\d+)\)/', '*/*[position()=\1]'),
-
-            // :contains(Foo)
-            array('/([_\w-]+[_\w\d-]*):contains\((.*?)\)/', '\1[contains(string(.),"\2")]'),
-
-            // >
-            array('/>/', '/'),
-
-            // ~
-            array('/~/', '/following-sibling::'),
-
-            // +
-            array('/\+([_\w-]+[_\w\d-]*)/', '/following-sibling::\1[position()=1]'),
-            array('~\]\*~', ']'),
-            array('~\]/\*~', ']'),
-
-        );
-
+        # Process all regular expressions to convert selector to XPath
         foreach ($selectors as &$selector) {
-            foreach ($rules as $rule) {
-                $selector = preg_replace($rule[0], $rule[1], $selector);
+            foreach (self::$regularExpressions as $find => $replace) {
+                $selector = preg_replace($find, $replace, $selector);
             }
         }
 
@@ -219,6 +208,8 @@ class QParser
     }
 
     /**
+     * Convert $element||$elements to an array.
+     *
      * @param $element \DOMNodeList|\DOMNode
      * @return array
      */
@@ -247,8 +238,9 @@ class QParser
         $array = array();
 
         for ($i = 0, $length = $element->length; $i < $length; ++$i) {
-            if ($element->item($i)->nodeType == XML_ELEMENT_NODE) {
-                $array[] = $this->toArray($element->item($i));
+            $item = $element->item($i);
+            if (XML_ELEMENT_NODE === $item->nodeType) {
+                $array[] = $this->toArray($item);
             }
         }
 
