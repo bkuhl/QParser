@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4338cc33-86e7-4014-b75d-7c096bc22245" name="Default" comment="" />
+    <list default="true" id="4338cc33-86e7-4014-b75d-7c096bc22245" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/exp2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/exp3.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpunit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Deimos/Tests/QParserTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/qparser.iml" afterPath="$PROJECT_DIR$/.idea/qparser.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Deimos/QParser.php" afterPath="$PROJECT_DIR$/src/Deimos/QParser.php" />
+    </list>
     <ignored path="qparser.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -21,27 +31,42 @@
     <favorites_list name="qparser" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="QParser.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Deimos/QParser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+            <state relative-caret-position="305">
+              <caret line="44" column="27" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
               <folding>
-                <element signature="e#471#545#0#PHP" expanded="false" />
-                <element signature="e#607#1007#0#PHP" expanded="false" />
-                <element signature="e#1108#1373#0#PHP" expanded="false" />
-                <element signature="e#1416#2015#0#PHP" expanded="false" />
-                <element signature="e#2059#5701#0#PHP" expanded="false" />
-                <element signature="e#2154#4652#0#PHP" expanded="false" />
-                <element signature="e#5159#5648#0#PHP" expanded="false" />
-                <element signature="e#5789#6654#0#PHP" expanded="false" />
+                <element signature="e#7#130#0#PHP" expanded="true" />
+                <element signature="e#403#477#0#PHP" expanded="false" />
+                <element signature="e#1424#2010#0#PHP" expanded="false" />
+                <element signature="e#2077#5724#0#PHP" expanded="false" />
+                <element signature="e#2189#4675#0#PHP" expanded="false" />
+                <element signature="e#5182#5671#0#PHP" expanded="false" />
+                <element signature="e#5812#6679#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exp3.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/exp3.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+              <folding>
+                <marker date="1458943196885" expanded="true" signature="68:217" placeholder="..." />
+                <marker date="1458943196885" expanded="true" signature="99:209" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -51,8 +76,15 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/examples/exp1.php" />
-        <option value="$PROJECT_DIR$/src/Deimos/QParser.php" />
         <option value="$PROJECT_DIR$/Readme.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/phpunit.php" />
+        <option value="$PROJECT_DIR$/tests/Deimos/Tests/test.php" />
+        <option value="$PROJECT_DIR$/examples/exp2.php" />
+        <option value="$PROJECT_DIR$/tests/Deimos/Tests/QParserTest.php" />
+        <option value="$PROJECT_DIR$/examples/emp3.php" />
+        <option value="$PROJECT_DIR$/examples/exp3.php" />
+        <option value="$PROJECT_DIR$/src/Deimos/QParser.php" />
       </list>
     </option>
   </component>
@@ -135,11 +167,15 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
+              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="composer" />
+              <option name="myItemId" value="Deimos" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tests" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -208,6 +244,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -232,22 +274,22 @@
       <option name="presentableId" value="Default" />
       <updated>1458919749783</updated>
       <workItem from="1458919751144" duration="3000" />
-      <workItem from="1458919999901" duration="6693000" />
+      <workItem from="1458919999901" duration="7268000" />
+      <workItem from="1458934248059" duration="4400000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6696000" />
+    <option name="totallyTimeSpent" value="11671000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25718608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26096824" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -258,6 +300,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -270,6 +313,24 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Deimos/QParser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#130#0#PHP" expanded="true" />
+            <element signature="e#403#477#0#PHP" expanded="false" />
+            <element signature="e#539#1019#0#PHP" expanded="false" />
+            <element signature="e#1120#1357#0#PHP" expanded="false" />
+            <element signature="e#1424#2010#0#PHP" expanded="false" />
+            <element signature="e#2077#5724#0#PHP" expanded="false" />
+            <element signature="e#2189#4675#0#PHP" expanded="false" />
+            <element signature="e#5182#5671#0#PHP" expanded="false" />
+            <element signature="e#5812#6679#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_8.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -282,7 +343,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -290,15 +350,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/dom_c.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="2149" column="64" selection-start-line="2149" selection-start-column="53" selection-end-line="2149" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -306,7 +357,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2808">
           <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -314,14 +364,95 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Deimos/Selector.php" />
+    <entry file="file://$PROJECT_DIR$/History.md" />
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="32" column="10" selection-start-line="32" selection-start-column="0" selection-end-line="40" selection-end-column="41" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Deimos/Tests/CalculateTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpunit.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="31" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="phar://$PROJECT_DIR$/phpunit.phar/phpunit/Framework/TestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2101">
+          <caret line="65" column="15" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="phar://$PROJECT_DIR$/phpunit.phar/phpunit/Framework/Assert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="502" column="27" selection-start-line="502" selection-start-column="27" selection-end-line="502" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Deimos/Tests/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="41" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpunit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Deimos/Tests/QParserTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="124" column="5" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
+          <folding>
+            <element signature="e#125#479#0#PHP" expanded="false" />
+            <element signature="e#485#2288#0#PHP" expanded="false" />
+            <marker date="1458943023840" expanded="true" signature="210:470" placeholder="..." />
+            <marker date="1458943023840" expanded="true" signature="294:455" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/exp1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        <state relative-caret-position="17">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
             <marker date="1458926508670" expanded="true" signature="69:190" placeholder="..." />
             <marker date="1458926508670" expanded="true" signature="81:181" placeholder="..." />
@@ -333,57 +464,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/examples/exp2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="18" column="38" selection-start-line="4" selection-start-column="0" selection-end-line="18" selection-end-column="38" />
+          <folding>
+            <marker date="1458942987880" expanded="true" signature="100:280" placeholder="..." />
+            <marker date="1458942987880" expanded="true" signature="160:273" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/dom_c.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1826">
+          <caret line="1022" column="20" selection-start-line="1022" selection-start-column="20" selection-end-line="1022" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Deimos/Selector.php">
+    <entry file="file://$PROJECT_DIR$/examples/exp3.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="306">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding>
+            <marker date="1458943196885" expanded="true" signature="68:217" placeholder="..." />
+            <marker date="1458943196885" expanded="true" signature="99:209" placeholder="..." />
+          </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/History.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="-92">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Deimos/QParser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+        <state relative-caret-position="305">
+          <caret line="44" column="27" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
           <folding>
-            <element signature="e#471#545#0#PHP" expanded="false" />
-            <element signature="e#607#1007#0#PHP" expanded="false" />
-            <element signature="e#1108#1373#0#PHP" expanded="false" />
-            <element signature="e#1416#2015#0#PHP" expanded="false" />
-            <element signature="e#2059#5701#0#PHP" expanded="false" />
-            <element signature="e#2154#4652#0#PHP" expanded="false" />
-            <element signature="e#5159#5648#0#PHP" expanded="false" />
-            <element signature="e#5789#6654#0#PHP" expanded="false" />
+            <element signature="e#7#130#0#PHP" expanded="true" />
+            <element signature="e#403#477#0#PHP" expanded="false" />
+            <element signature="e#1424#2010#0#PHP" expanded="false" />
+            <element signature="e#2077#5724#0#PHP" expanded="false" />
+            <element signature="e#2189#4675#0#PHP" expanded="false" />
+            <element signature="e#5182#5671#0#PHP" expanded="false" />
+            <element signature="e#5812#6679#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

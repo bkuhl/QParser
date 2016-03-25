@@ -3,7 +3,7 @@
 /**
  * @author REZ1DENT3
  * https://github.com/REZ1DENT3/QParser
- * 
+ *
  * @author tj
  * https://github.com/tj/php-selector
  */
@@ -14,19 +14,14 @@ class QParser
 {
 
     /**
-     * @var null|string
-     */
-    private $selector = null;
-
-    /**
      * @var \DOMDocument|null
      */
-    private $dom = null;
+    protected $dom = null;
 
     /**
      * @var \DOMXpath|null
      */
-    private $xpath = null;
+    protected $xpath = null;
 
     /**
      * QParser constructor.
@@ -45,7 +40,9 @@ class QParser
 
         if (is_string($html)) {
             $this->dom = new \DOMDocument();
-            $this->dom->loadHTML($html);
+            ob_start();
+            $this->dom->loadHTML('<?xml encoding="UTF-8">' . $html);
+            ob_get_clean();
         }
         else if ($html instanceof \DOMDocument) {
             $this->dom = $html;
@@ -65,8 +62,7 @@ class QParser
      */
     public function find($selector, $asArray = true)
     {
-        $this->selector = $selector;
-        $elements = $this->xpath->evaluate($this->toXPath());
+        $elements = $this->xpath->evaluate($this->toXPath($selector));
         if ($asArray) {
             return $this->toArray($elements);
         }
@@ -74,12 +70,13 @@ class QParser
     }
 
     /**
+     * @param $selector
      * @return mixed
      */
-    private function getSelectors()
+    protected function getSelectors($selector)
     {
 
-        if (empty($this->selector)) {
+        if (empty($selector)) {
             throw new \InvalidArgumentException(__FUNCTION__);
         }
 
@@ -91,22 +88,23 @@ class QParser
         );
 
         foreach ($removeSpacesAroundOperators as $removeSpace) {
-            $this->selector = preg_replace($removeSpace[0], $removeSpace[1], $this->selector);
+            $selector = preg_replace($removeSpace[0], $removeSpace[1], $selector);
         }
 
-        return preg_split('/\s+(?![^\[]+\])/', $this->selector);
+        return preg_split('/\s+(?![^\[]+\])/', $selector);
 
     }
 
     /**
-     * @return string
+     * @param $selector
+     * @return mixed
      */
-    private function toXPath()
+    public function toXPath($selector)
     {
 
-        $selectors = $this->getSelectors();
+        $selectors = $this->getSelectors($selector);
         $rules = array(
-            
+
             // ,
             array('/,/', '|descendant-or-self::'),
 
@@ -217,7 +215,7 @@ class QParser
      * @param $element \DOMNodeList|\DOMNode
      * @return array
      */
-    private function toArray($element)
+    protected function toArray($element)
     {
 
         if (isset($element->nodeName)) {
