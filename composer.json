@@ -1,0 +1,14 @@
+{
+  "name": "deimos/qparser",
+  "authors": [
+    {
+      "name": "REZ1DENT3",
+      "email": "maksim.babichev95@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-0": {
+      "": "src/"
+    }
+  }
+}
