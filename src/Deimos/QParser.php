@@ -25,11 +25,13 @@ class QParser
 
     /**
      * QParser constructor.
-     * @param $html string|\DOMDocument
+     * @param $html string|\DOMDocument|null
      */
-    public function __construct($html)
+    public function __construct($html = null)
     {
-        $this->load($html);
+        if ($html) {
+            $this->load($html);
+        }
     }
 
     /**
@@ -39,6 +41,11 @@ class QParser
     {
 
         if (is_string($html)) {
+
+            if (file_exists($html)) {
+                $html = file_get_contents($html);
+            }
+
             $this->dom = new \DOMDocument();
             ob_start();
             $this->dom->loadHTML('<?xml encoding="UTF-8">' . $html);

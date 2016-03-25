@@ -126,7 +126,7 @@ class QParserTest extends \PHPUnit_Framework_TestCase
             array('form#login > input[type=hidden]._method', 'descendant-or-self::form[@id="login"]/input[@type="hidden"][contains(concat(" ",@class," ")," _method ")]')
         );
 
-        $qp = new OverloadQParser($this->getHtml());
+        $qp = new OverloadQParser();
         foreach ($tests as $test) {
             $this->assertEquals($test[1], $qp->testToXPath($test[0]));
         }

@@ -4,7 +4,6 @@
     <list default="true" id="4338cc33-86e7-4014-b75d-7c096bc22245" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Deimos/QParser.php" afterPath="$PROJECT_DIR$/src/Deimos/QParser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Deimos/Tests/QParserTest.php" afterPath="$PROJECT_DIR$/tests/Deimos/Tests/QParserTest.php" />
     </list>
     <ignored path="qparser.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,32 +25,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="QParser.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="QParser.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Deimos/QParser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="101" column="30" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="30" />
+            <state relative-caret-position="320">
+              <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
               <folding>
                 <element signature="e#7#130#0#PHP" expanded="true" />
-                <element signature="e#403#477#0#PHP" expanded="false" />
-                <element signature="e#1424#2010#0#PHP" expanded="false" />
-                <element signature="e#2077#5727#0#PHP" expanded="false" />
-                <element signature="e#2192#4678#0#PHP" expanded="false" />
-                <element signature="e#5185#5674#0#PHP" expanded="false" />
-                <element signature="e#5815#6682#0#PHP" expanded="false" />
+                <element signature="e#5336#5825#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QParserTest.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="QParserTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Deimos/Tests/QParserTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
               <folding>
-                <marker date="1458943686765" expanded="true" signature="350:610" placeholder="..." />
-                <marker date="1458943686765" expanded="true" signature="434:595" placeholder="..." />
+                <marker date="1458944463780" expanded="true" signature="350:610" placeholder="..." />
+                <marker date="1458944463780" expanded="true" signature="434:595" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -71,14 +65,14 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/examples/exp1.php" />
         <option value="$PROJECT_DIR$/Readme.md" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/phpunit.php" />
         <option value="$PROJECT_DIR$/tests/Deimos/Tests/test.php" />
         <option value="$PROJECT_DIR$/examples/exp2.php" />
         <option value="$PROJECT_DIR$/examples/emp3.php" />
         <option value="$PROJECT_DIR$/examples/exp3.php" />
-        <option value="$PROJECT_DIR$/src/Deimos/QParser.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/tests/Deimos/Tests/QParserTest.php" />
+        <option value="$PROJECT_DIR$/src/Deimos/QParser.php" />
       </list>
     </option>
   </component>
@@ -191,20 +185,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qparser" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qparser" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -269,12 +249,12 @@
       <updated>1458919749783</updated>
       <workItem from="1458919751144" duration="3000" />
       <workItem from="1458919999901" duration="7268000" />
-      <workItem from="1458934248059" duration="4592000" />
+      <workItem from="1458934248059" duration="5506000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11863000" />
+    <option name="totallyTimeSpent" value="12777000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -313,14 +293,14 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#7#130#0#PHP" expanded="true" />
-            <element signature="e#403#477#0#PHP" expanded="false" />
-            <element signature="e#539#1019#0#PHP" expanded="false" />
-            <element signature="e#1120#1357#0#PHP" expanded="false" />
-            <element signature="e#1424#2010#0#PHP" expanded="false" />
-            <element signature="e#2077#5727#0#PHP" expanded="false" />
-            <element signature="e#2192#4678#0#PHP" expanded="false" />
-            <element signature="e#5185#5674#0#PHP" expanded="false" />
-            <element signature="e#5815#6682#0#PHP" expanded="false" />
+            <element signature="e#408#524#0#PHP" expanded="false" />
+            <element signature="e#586#1170#0#PHP" expanded="false" />
+            <element signature="e#1271#1508#0#PHP" expanded="false" />
+            <element signature="e#1575#2161#0#PHP" expanded="false" />
+            <element signature="e#2228#5878#0#PHP" expanded="false" />
+            <element signature="e#2343#4829#0#PHP" expanded="false" />
+            <element signature="e#5336#5825#0#PHP" expanded="false" />
+            <element signature="e#5966#6833#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -370,14 +350,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="32" column="10" selection-start-line="32" selection-start-column="0" selection-end-line="40" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -464,22 +436,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Deimos/QParser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="101" column="30" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="30" />
-          <folding>
-            <element signature="e#7#130#0#PHP" expanded="true" />
-            <element signature="e#403#477#0#PHP" expanded="false" />
-            <element signature="e#1424#2010#0#PHP" expanded="false" />
-            <element signature="e#2077#5727#0#PHP" expanded="false" />
-            <element signature="e#2192#4678#0#PHP" expanded="false" />
-            <element signature="e#5185#5674#0#PHP" expanded="false" />
-            <element signature="e#5815#6682#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/exp3.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -491,13 +447,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Deimos/Tests/QParserTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+        <state relative-caret-position="323">
+          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
           <folding>
-            <marker date="1458943686765" expanded="true" signature="350:610" placeholder="..." />
-            <marker date="1458943686765" expanded="true" signature="434:595" placeholder="..." />
+            <marker date="1458944463780" expanded="true" signature="350:610" placeholder="..." />
+            <marker date="1458944463780" expanded="true" signature="434:595" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Deimos/QParser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+          <folding>
+            <element signature="e#7#130#0#PHP" expanded="true" />
+            <element signature="e#5336#5825#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
