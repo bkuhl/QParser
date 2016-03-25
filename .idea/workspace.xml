@@ -52,6 +52,7 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/examples/exp1.php" />
         <option value="$PROJECT_DIR$/src/Deimos/QParser.php" />
+        <option value="$PROJECT_DIR$/Readme.md" />
       </list>
     </option>
   </component>
@@ -231,12 +232,12 @@
       <option name="presentableId" value="Default" />
       <updated>1458919749783</updated>
       <workItem from="1458919751144" duration="3000" />
-      <workItem from="1458919999901" duration="5672000" />
+      <workItem from="1458919999901" duration="5937000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5675000" />
+    <option name="totallyTimeSpent" value="5940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -346,6 +347,28 @@
           <caret line="16" column="17" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="17" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/History.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-92">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Readme.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Deimos/QParser.php">
