@@ -1,16 +1,12 @@
 <?php
 
-/**
- * @author REZ1DENT3
- * https://github.com/REZ1DENT3/QParser
- *
- * @author tj
- * https://github.com/tj/php-selector
- */
+namespace PHPSelector;
 
-namespace Deimos;
+use InvalidArgumentException;
+use DOMXpath;
+use DOMDocument;
 
-class QParser
+class Dom
 {
 
     /**
@@ -28,7 +24,7 @@ class QParser
      *
      * @var array
      */
-    public static $regularExpressions = array(
+    public static $regularExpressions = [
 
         // ,
         '/,/' => '|descendant-or-self::',
@@ -101,7 +97,7 @@ class QParser
         '~\]\*~' => ']',
         '~\]/\*~' => ']',
 
-    );
+    ];
 
     /**
      * QParser constructor.
@@ -126,19 +122,19 @@ class QParser
                 $html = file_get_contents($html);
             }
 
-            $this->dom = new \DOMDocument();
+            $this->dom = new DOMDocument();
             ob_start();
             $this->dom->loadHTML('<?xml encoding="UTF-8">' . $html);
             ob_get_clean();
         }
-        else if ($html instanceof \DOMDocument) {
+        else if ($html instanceof DOMDocument) {
             $this->dom = $html;
         }
         else {
-            throw new \InvalidArgumentException(__FUNCTION__);
+            throw new InvalidArgumentException(__FUNCTION__);
         }
 
-        $this->xpath = new \DOMXpath($this->dom);
+        $this->xpath = new DOMXpath($this->dom);
 
     }
 
@@ -147,7 +143,7 @@ class QParser
      * @param bool $asArray
      * @return array|mixed
      */
-    public function find($selector, $asArray = true)
+    public function find(string $selector, bool $asArray = true)
     {
         $elements = $this->xpath->evaluate($this->toXPath($selector));
         if ($asArray) {
@@ -158,15 +154,12 @@ class QParser
 
     /**
      * Convert $selector into an XPath string.
-     *
-     * @param $selector
-     * @return mixed
      */
-    protected function toXPath($selector)
+    protected function toXPath(string $selector) : string
     {
 
         if (empty($selector)) {
-            throw new \InvalidArgumentException(__FUNCTION__);
+            throw new InvalidArgumentException(__FUNCTION__);
         }
 
         // remove spaces around operators
@@ -211,19 +204,18 @@ class QParser
      * Convert $element||$elements to an array.
      *
      * @param $element \DOMNodeList|\DOMNode
-     * @return array
      */
-    protected function toArray($element)
+    protected function toArray($element) : array
     {
 
         if (isset($element->nodeName)) {
 
-            $array = array(
+            $array = [
                 'name' => $element->nodeName,
-                '@attributes' => array(),
+                '@attributes' => [],
                 'text' => $element->textContent,
                 'children' => $this->toArray($element->childNodes)
-            );
+            ];
 
             if ($element->attributes->length) {
                 foreach ($element->attributes as $key => $attr) {
@@ -235,8 +227,7 @@ class QParser
 
         }
 
-        $array = array();
-
+        $array = [];
         for ($i = 0, $length = $element->length; $i < $length; ++$i) {
             $item = $element->item($i);
             if (XML_ELEMENT_NODE === $item->nodeType) {
