@@ -96,8 +96,8 @@ class DomTest extends TestCase
             ['foo> bar', 'descendant-or-self::foo/bar'],
             ['div#foo', 'descendant-or-self::div[@id="foo"]'],
             ['#foo', 'descendant-or-self::*[@id="foo"]'],
-            ['div.foo', 'descendant-or-self::div[contains(concat(" ",@class," "]," foo ")]'],
-            ['.foo', 'descendant-or-self::*[contains(concat(" ",@class," "]," foo ")]'],
+            ['div.foo', 'descendant-or-self::div[contains(concat(" ",@class," ")," foo ")]'],
+            ['.foo', 'descendant-or-self::*[contains(concat(" ",@class," ")," foo ")]'],
             ['[id]', 'descendant-or-self::*[@id]'],
             ['[id=bar]', 'descendant-or-self::*[@id="bar"]'],
             ['foo[id=bar]', 'descendant-or-self::foo[@id="bar"]'],
@@ -114,15 +114,15 @@ class DomTest extends TestCase
             [':nth-child(2)', 'descendant-or-self::*/*[position()=2]'],
             ['div:nth-child(2)', 'descendant-or-self::*/*[position()=2 and self::div]'],
             ['foo + bar', 'descendant-or-self::foo/following-sibling::bar[position()=1]'],
-            ['li:contains(Foo)', 'descendant-or-self::li[contains(string(.],"Foo")]'],
+            ['li:contains(Foo)', 'descendant-or-self::li[contains(string(.),"Foo")]'],
 
             ['foo bar baz', 'descendant-or-self::foo/descendant::bar/descendant::baz'],
             ['foo + bar + baz', 'descendant-or-self::foo/following-sibling::bar[position()=1]/following-sibling::baz[position()=1]'],
             ['foo > bar > baz', 'descendant-or-self::foo/bar/baz'],
             ['p ~ p ~ p', 'descendant-or-self::p/following-sibling::p/following-sibling::p'],
             ['div#article p em', 'descendant-or-self::div[@id="article"]/descendant::p/descendant::em'],
-            ['div.foo:first-child', 'descendant-or-self::div[contains(concat(" ",@class," "]," foo ")][position()=1]'],
-            ['form#login > input[type=hidden]._method', 'descendant-or-self::form[@id="login"]/input[@type="hidden"][contains(concat(" ",@class," "]," _method ")]']
+            ['div.foo:first-child', 'descendant-or-self::div[contains(concat(" ",@class," ")," foo ")][position()=1]'],
+            ['form#login > input[type=hidden]._method', 'descendant-or-self::form[@id="login"]/input[@type="hidden"][contains(concat(" ",@class," ")," _method ")]']
         ];
 
         $dom = new OverloadSelector();
