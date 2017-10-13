@@ -2,7 +2,7 @@
 
 [![Latest Stable Version](https://poser.pugx.org/bkuhl/php-selector/v/stable.png)](https://packagist.org/packages/bkuhl/php-selector) [![Total Downloads](https://poser.pugx.org/bkuhl/php-selector/downloads.png)](https://packagist.org/packages/bkuhl/php-selector) [![Build Status](https://travis-ci.org/bkuhl/php-selector.svg?branch=master)](https://travis-ci.org/bkuhl/php-selector) 
 
-Current supports most CSS3 selectors.
+A simple DOM query library originally written by [tj](https://github.com/tj/php-selector).
 
 ## Usage
 
