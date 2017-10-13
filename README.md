@@ -4,6 +4,12 @@
 
 A simple DOM query library originally written by [tj](https://github.com/tj/php-selector).
 
+## Installation
+
+```
+composer require bkuhl/php-selector:~1.0
+```
+
 ## Usage
 
 Given the sample html:
